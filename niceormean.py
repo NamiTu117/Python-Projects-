@@ -60,7 +60,7 @@ def nice_mean(nice,mean,name):
             print("\nThe stranger walks away smiling...")
             nice = (nice + 1)
             stop = False
-        if  pick == "n":
+        if  pick == "m":
             print ("\nthe stranger glarese at you \nmenacingly and storms off...")
             mean = (mean + 1)
             stop = False
@@ -74,7 +74,7 @@ def show_score(nice,mean,name):
 
 def score(nice,mean,name):
     #score function is being passed the values stored within the 3 variables
-    if nice > 2: #if condition is valid, call win function passing in the variables so it can use htem
+    if nice > 2: #if condition is valid, call win function passing in the variables so it can use them
         win(nice,mean,name)
     if mean > 2: #if condition is valid, call lose function passing in the variables so it can use them
         lose(nice,mean,name)
