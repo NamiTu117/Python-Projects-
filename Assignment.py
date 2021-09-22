@@ -20,17 +20,14 @@ fileList = ('information.docx', 'Hello.txt', 'myImage.png', \
 
 
 conn = sqlite3.connect('scrpt.db')
-#checking for files 
-for file in fileList: 
-    #checking files with txt extension
-    if file.endswith(".txt"):
-        #prints names of txt files
-        with conn:
-            cur.execute("INSERT INTO tbl_assignment (col_name) VALUES(?)",(file,))
+with conn:
+    #checking for files 
+     for file in fileList: 
+        #checking files with txt extension
+        if file.endswith(".txt"):
+            with conn:
+                cur=conn.cursor()
+            #prints names of txt files
             cur.execute("INSERT INTO tbl_assignment (col_name) VALUES(?)",(file,))
             print(file)
         conn.commit()
-conn.close()
-    
-
-conn = sqlite3.connect('scrpt.db')
