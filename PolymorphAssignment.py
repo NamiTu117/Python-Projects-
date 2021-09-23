@@ -6,7 +6,7 @@ class Agent:
     birth_date = "05/15/1996" 
     passcode = "79985" 
 
-
+    #main function
     def Account(self):
         print("Welcome! This is a new system. Please re-enter your information for a new ID card")
         account_name = input("Name: ")
@@ -25,38 +25,44 @@ class Sector(Agent):
     division: "Parapsychology"
     status: "active"
     password: "90Wo9" 
-
+    #changes from passcode to password 
     def Account(self):
         print("Welcome! This is a new system. Please re-enter your information for a new ID card")
         account_name = input("Name: ")
         account_passcode = input("Password: ")
         account_birthdate =input("Date of Birth: ")
-        if (account_name ==self.name and account_password == self.password and account_birthdate == self.birth_date)"
+        if (account_name ==self.name and account_password == self.password and account_birthdate == self.birth_date):
             print("Access Granted")
         else:
-            print("Access Denied! Re-enter your information)
+            print("Access Denied! Re-enter your information")
         
         
             
 
-
+#second child class 
 class Bio(Agent):
     place_of_birth: "Boulder, Colorado"
     school: "Boulder High"
     address: "4650 Kyros Dr."
     zipcode: "80328"
-
+    #changes from Date of Birth to Place of Birth 
     def Account(self):
         print("Welcome! Please enter your information")
         account_name = input("Name: ")
         account_passcode = input("Password: ")
         account_place = input("Place of Birth: ")
-        if (account_name ==self.name and account_password == self.password and account_place == self.place_of_birth)"
+        if (account_name ==self.name and account_password == self.password and account_place == self.place_of_birth):
             print("Access Granted")
         else:
-            print("Access Denied! Re-enter your information)
+            print("Access Denied! Re-enter your information")
         
-        
+
+#codes that run the program
+agent = Agent ()
+agent.Account()
+
+security = Sector()
+security = Bio()
             
 
 
