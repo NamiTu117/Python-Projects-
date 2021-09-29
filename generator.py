@@ -72,7 +72,7 @@ class Gen(Frame):
         file.close()
 
         #opens new browser w/user text
-        webbrowser.open_new('chrome {}'.format(usertext))
+        webbrowser.open_new("assignment.html")
 
 
 #function that runs window 
