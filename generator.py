@@ -62,6 +62,7 @@ class Gen(Frame):
     </body>
 </html>
      '''
+        #takes input and formats it into the body for the new page
         websitetext = text1 + usertext + text2 
         self.lblGene.config(text=' {} '.format(usertext))
 
@@ -70,9 +71,8 @@ class Gen(Frame):
         file.write(websitetext)
         file.close()
 
-        webbrowser.open_new_tab("assignment.html")
-
-     
+        #opens new browser w/user text
+        webbrowser.open_new('chrome {}'.format(usertext))
 
 
 #function that runs window 
