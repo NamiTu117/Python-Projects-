@@ -54,12 +54,12 @@ class Search(Frame):
         self.txtSearch2.grid(row=1, column=1, padx=(30,0), pady=(30,0))
 
     def search(self):
-        src = filedialog.askdirectory()
+        src = fd.askdirectory()
         self.txtSearch.delete(0,END)
         self.txtSearch.insert(0,src)
 
     def search2(self):
-        sia = filedialog.askdirectory()
+        sia = fd.askdirectory()
         self.txtSearch2.delete(0,END)
         self.txtSearch2.insert(0,sia)
 
