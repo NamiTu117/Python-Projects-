@@ -22,11 +22,11 @@ def create_account(request):
 
 def balance(request, pk):
     account = get_object_or_404(Account, pk=pk)
-    transactions = Transaction.Transaction.filter(account=pk)
+    transactions = Transaction.Transactions.filter(account = pk)
     current_total = account.initial_deposit
     table_contents = { }
     for t in transactions:
-        if t.type =='Deposit':
+        if t.type == 'Deposit':
             current_total += t.amount
             table_contents.update({t: current_total})
         else:
