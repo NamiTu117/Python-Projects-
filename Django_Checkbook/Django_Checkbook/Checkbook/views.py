@@ -4,7 +4,7 @@ from .forms import AccountForm, TransactionForm
 
 # Create your views here.
 def home(request):
-    form = TransactionForm(data=request.Post or None)
+    form = TransactionForm(data=request.POST or None)
     if request.method == 'POST':
         pk = request.POST['account']
         return balance(request, pk)
