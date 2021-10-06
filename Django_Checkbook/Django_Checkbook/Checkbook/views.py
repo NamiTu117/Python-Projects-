@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect,get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Account, Transaction
 from .forms import AccountForm, TransactionForm
 
@@ -31,9 +31,9 @@ def balance(request, pk):
             table_contents.update({t: current_total})
         else:
             current_total -= t.amount
-            table_contents.update({t : current_total})
+            table_contents.update({t: current_total})
     content = {'account': account, 'table_contents': table_contents, 'balance': current_total}
-    return render(request, 'checkbook/BalanceSheet.html')
+    return render(request, 'checkbook/BalanceSheet.html', content)
 
 
 def transaction(request):
